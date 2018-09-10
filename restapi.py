@@ -1,5 +1,20 @@
+###Flask web server
 from flask import Flask, request, url_for, redirect
 from flask_restful import reqparse, abort, Api, Resource
+
+###MySQL
+import pymysql
+from pymysql.cursors import DictCursor
+
+###Config
+from config import Config
+
+###
+from utils import access_database
+
+###
+import gc, time
+from pprint import pprint
 
 app = Flask(__name__)
 
@@ -10,6 +25,14 @@ def search():
     if request.method == 'POST':
         result = request.args.get('options')
         if result == 'index':
+
+            cnx, cur = access_database()
+            sql = """
+            select * from temp_user
+            """
+            cur.execute(sql)
+            results = cur.fetchall()
+            # pprint(results)
 
             return url_for('result', options=result)
 

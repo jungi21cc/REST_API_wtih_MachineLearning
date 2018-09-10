@@ -1,9 +1,20 @@
 # REST_API_wtih_MachineLearning
 
-
 ### REST API
 
-####1. Search API
+#### Recommend requirements
+
+- python3
+- flask
+- flask_restful
+
+#### Run Flask web server
+
+```buildoutcfg
+$ python3 restapi.py
+``` 
+
+#### 1. Search API
 
 search options : Index, Type
 
@@ -25,4 +36,30 @@ $ curl -X POST http://127.0.0.1:5000/search?options=index
 ```buildoutcfg
 /result/index
 ```
+
+
+#### 2. Result API
+
+- terminal
+
+```
+$ curl -X GET http://127.0.0.1:5000/result/index
+1
+```
+
+- Postman 
+
+![alt text](/image/postman2.png "cover_image")
+
+```buildoutcfg
+1
+```
+
+
+### comming soon
+
+- Elasticsearch
+- 
+
+
 
