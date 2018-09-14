@@ -59,7 +59,13 @@ $ curl -X GET http://127.0.0.1:5000/result/index
 ### comming soon
 
 - Elasticsearch
-- 
+- Machine Learning
+    - Image Classification
+    - NLP
+        - word2vec
+        - TF IDF (Term Frequency Inverse Document Frequency)
+        - Korean POS Tag (Part of Speech Tag)
+        
 
 
 
